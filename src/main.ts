@@ -44,7 +44,7 @@ document.querySelectorAll('.reveal, .reveal-fade, .stagger').forEach((el) => {
 // O CSS cuida da animação; apenas garante que icons girem corretamente
 document.querySelectorAll('details').forEach((details) => {
   details.addEventListener('toggle', () => {
-    const icon = details.querySelector('.faq-icon')
+    const icon = details.querySelector('.faq-icon') as HTMLElement | null
     if (icon) {
       icon.style.transform = details.open ? 'rotate(45deg)' : 'rotate(0deg)'
     }
